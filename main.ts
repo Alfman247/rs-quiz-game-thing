@@ -13,6 +13,7 @@ input.onButtonPressed(Button.A, function () {
         } else if (Question_number == 5) {
             Correct()
         }
+        setup_mode()
     }
 })
 function setup_mode () {
@@ -35,6 +36,7 @@ input.onButtonPressed(Button.B, function () {
         } else if (Question_number == 5) {
             Incorrect()
         }
+        setup_mode()
     }
 })
 function question_mode () {
@@ -50,14 +52,16 @@ function Cool_animation () {
     basic.clearScreen()
 }
 function Incorrect () {
-    basic.showIcon(IconNames.Yes)
+    basic.showIcon(IconNames.No)
     music.playMelody("C5 B A G F E D C ", 120)
     basic.pause(100)
+    Cool_animation()
 }
 function Correct () {
     basic.showIcon(IconNames.Yes)
     music.playMelody("C D E F G A B C5 ", 120)
     basic.pause(100)
+    Cool_animation()
 }
 let Question_number = 0
 let Mode_0__setup_1__question = 0
