@@ -19,6 +19,13 @@ input.onButtonPressed(Button.A, function () {
 function setup_mode () {
     Mode_0__setup_1__question = 0
     Question_number = 0
+    basic.showLeds(`
+        . # # # .
+        . . . # .
+        . . # # .
+        . . . . .
+        . . # . .
+        `)
 }
 input.onButtonPressed(Button.B, function () {
     if (Mode_0__setup_1__question == 0) {
